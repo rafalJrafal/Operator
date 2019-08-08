@@ -36,6 +36,11 @@ class ClassX : public BaseClass {
 			this->mValue++;
 			return *this;
 		}
+		const ClassX & operator + (const ClassX & value) {
+			log->log("Operator + ClassX for %p", this);
+			this->mValue += value.mValue;
+			return *this;
+		}
 	private:
 		int mValue;
 	public:
