@@ -5,14 +5,17 @@
 
 namespace OperatorTest {
 
+const char OPERATOR_LOG_FILENAME [] = "operator.txt";
+
 class BaseClass {
 	public:
 		BaseClass() {
-			log = LogSystem::LogSystem::instance("operator.txt");
+			log = LogSystem::LogSystem::instance(OPERATOR_LOG_FILENAME);
 			log->log("Constructor BaseClass this - %p", this);
 		}
 		~BaseClass() {
-			log->log("Destructor BaseClass this - %p", this);
+			LogSystem::LogSystem * sLog = LogSystem::LogSystem::instance(OPERATOR_LOG_FILENAME);
+			sLog->log("Destructor BaseClass this - %p", this);
 		}
 		BaseClass(const BaseClass& copy) {
 			log->log("Copy Constructor BaseClass this - %p copy from %d", this, &copy);
