@@ -3,6 +3,8 @@
 
 #include "BaseClass.h"
 
+#include "../../SystemCalls/inc/MemoryMonitorInclude.h"
+
 namespace OperatorTest {
 
 class ClassX : public BaseClass {

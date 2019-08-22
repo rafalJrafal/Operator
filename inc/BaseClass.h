@@ -1,6 +1,8 @@
 #ifndef BASECLASS_H
 #define BASECLASS_H
 
+#include "../../SystemCalls/inc/MemoryMonitorInclude.h"
+
 #include "../../LogSystem/inc/LogSystem.h"
 
 namespace OperatorTest {
