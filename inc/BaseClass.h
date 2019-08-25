@@ -1,6 +1,7 @@
 #ifndef BASECLASS_H
 #define BASECLASS_H
 
+#include <iostream>
 #include "../../SystemCalls/inc/MemoryMonitorInclude.h"
 
 #include "../../LogSystem/inc/LogSystem.h"
@@ -13,6 +14,10 @@ class BaseClass {
 	public:
 		BaseClass() {
 			log = LogSystem::LogSystem::instance(OPERATOR_LOG_FILENAME);
+			log->log("Constructor BaseClass this - %p", this);
+		}
+		BaseClass(const char * fileName) {
+			log = LogSystem::LogSystem::instance(fileName);
 			log->log("Constructor BaseClass this - %p", this);
 		}
 		~BaseClass() {
