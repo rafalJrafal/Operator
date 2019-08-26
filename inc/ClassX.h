@@ -16,7 +16,7 @@ class ClassX : public BaseClass {
 			log->log("Copy Constructor ClassX this - %p, copy from - %p", this, &copy);
 		}
 		~ClassX() {
-			LogSystem::LogSystem * sLog = LogSystem::LogSystem::instance(OPERATOR_LOG_FILENAME);
+			NamespaceLog::LogSystem * sLog = NamespaceLog::LogSystem::instance(OPERATOR_LOG_FILENAME);
 			sLog->log("Destructor ClassX this - %p", this);
 		}
 		const ClassX & operator = (const int & value) {

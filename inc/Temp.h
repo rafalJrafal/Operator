@@ -21,7 +21,7 @@ template <class Tm, int val = 0> class Temp : public BaseClass {
 
 template <class Tm, int val>
 Temp<Tm, val>::Temp(int value) : BaseClass(TEMPLATE_LOG_FILENAME), mParameter(value) {
-	log = LogSystem::LogSystem::instance(TEMPLATE_LOG_FILENAME);
+	log = NamespaceLog::LogSystem::instance(TEMPLATE_LOG_FILENAME);
 	log->log("Start: val = %d", val);
 }
 
